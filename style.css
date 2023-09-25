@@ -1,0 +1,302 @@
+body{
+  text-align: center;
+  background-image:  url("https://img.freepik.com/fotos-gratis/fatias-de-frutas-e-bagas-em-fundo-amarelo_23-2148144274.jpg?w=2000");
+  background-size: auto 100%;
+  background-repeat: repeat;
+   color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  z-index: 3;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  bottom: 0;
+  background-image:  url("https://img.freepik.com/fotos-gratis/fatias-de-frutas-e-bagas-em-fundo-amarelo_23-2148144274.jpg?w=2000");
+  transform: scaleX(-1);
+  z-index: -2;
+  background-size: auto 100%;
+  background-repeat: repeat;
+  height: 1300px;
+}
+
+#navegacao {
+  position: fixed;
+  list-style-type: none;
+  margin: auto;
+  margin-left: -50%;
+  margin-top: -61px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #258337;
+  width: 100%;
+  font-weight: 300;
+  display: inline;
+}
+
+/*cor ul #258337
+#FFB944 laranja
+*/
+
+#navegacao > li {
+  display: inline;
+  float: left;
+}
+
+#navegacao > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navegacao > li a:hover {
+  background-color: #111;
+}
+
+#menu, #menu-suspenso {
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+
+  #navegacao {
+    display: none;
+  }
+
+  #navegacao > #linkCarrinho > #carrinho {
+    display: block;
+  }
+
+  #pesquisar {
+    
+  }
+
+  #menu  {
+    width: 100%;
+    margin-left: -7%;
+    margin-top: -61px;
+    display: none;
+    float: left;
+    background-color: #258337;
+    list-style-type: none;
+    text-align: left;
+    height: 60px;
+    position: fixed;
+  }
+
+
+  #menu > li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+  }
+
+  #menu > li a:hover {
+    background-color: #111;
+  }
+
+  #menu-suspenso  {
+    width: 20%;
+    margin-left: 0;
+    margin-top: -61px;
+    float: left;
+    background-color: #01ff30;
+    list-style-type: none;
+    text-align: left;
+    height: 60px;
+    position: fixed;
+    display: block;
+  }
+
+  #menu-suspenso:hover #menu {
+    display: block;
+  }
+
+}
+
+#pesquisar {
+margin-top: 6px;
+margin-left: -430px;
+padding: 7px;
+width: 300px;
+border: solid #56BA56;
+border-radius: 5px;
+}
+
+@media screen and (max-width: 1110px) {
+  #pesquisar {
+    display: none;
+  }
+}
+
+#titulo {
+  color: rgb(252, 252, 252);
+  margin-top: 10px;    
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: -10px
+}
+
+h1 {
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+#inicio {
+  background-color: #528540;
+  width: 400px;
+  margin: auto;
+  border-radius: 30px;
+  margin-top: 60px;
+}
+
+h3{
+  color:rgb(255, 255, 255);
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+#frutas {
+  
+  border-radius: 10px;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  border: solid #945532 4px;
+  background-color: #528540;
+  z-index: 2;
+}
+
+img{
+  background-color: none;
+  height: 100px;
+  width: 100px;
+  border: solid 5px #A35A49;
+  border-radius: 14px;
+}
+
+#containersa {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  margin: 30px;
+}
+
+#containersa > div{
+   flex:1;
+   padding:10px;
+   box-sizing: border-box;
+
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  
+}
+
+#contato {
+    background-color: #CF956D;
+    color: black;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    width: 700px;
+    height: 230px;
+    border: solid #A35A49 5px;
+}
+
+#contato1 {
+  color: #111;
+}
+
+#contato > form > button {
+  border: none;
+}
+
+#contato > form > button:active {
+  background-color: #818181;
+  color: white;
+}
+
+#p {
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+  width: 300px;
+  margin: 15px auto 0px;
+}
+
+/* mensagem de adicionado ao carrinho :D*/ 
+.mensagem {
+  display: none;
+  background-color: #f1f1f1;
+  color: #111;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  height: 25px;
+}
+
+.AdicionarCarrinho:focus + .mensagem {
+  display: block;
+  animation: fadeOut 6s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { opacity: 0; display: none;}
+}
+
+.fruta > img {
+ background-color: none;
+}
+
+#carrinho {
+display: flex;
+justify-content: end;
+margin-right: 50px;
+margin-top: -27px;
+}
+
+#contador {
+margin-left: 5px;
+}
+
+#itens {
+margin-left: 2px;
+}
+
+#linkCarrinho {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+
+
+.inline {
+display: inline;
+}
+
+.AdicionarCarrinho {
+  background-color: #1D692B;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

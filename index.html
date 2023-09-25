@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Fruteira do João - Frutas Frescas</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <ul id="navegacao">
+                <li><a href="#inicio">INÍCIO</a></li>
+                <li><a href="#frutas">FRUTAS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="#email">NOVIDADES</a></li>
+
+                <div id="pesquisas" class="inline">
+                    <input type="search" name="" id="pesquisar" oninput="filterOptions()" list="options"
+                        placeholder="Está procurando algo?" />
+                    <datalist id="options">
+                        <option value="Maçã" href="">
+                        <option value="Bergamota">
+                        <option value="Uva">
+                        <option value="Abacaxi">
+                        <option value="Goiaba">
+                        <option value="Laranja">
+                        <option value="Pera" href="#pera">
+                        <option value="Banana">
+                    </datalist>
+                </div>
+                <a id="linkCarrinho" href="page01.html">
+                    <div id="carrinho" class="inline">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="contador">0</span>
+                        <span id="itens">Itens</span>
+                </a></div>
+            </ul>
+            <!-- Menu oculto para tela menor  -->
+            <div id="menu-suspenso">
+                <button id="botao">☰ Abrir Menu</button>
+                <ul id="menu">
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#frutas">FRUTAS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <li><a href="#email">NOVIDADES</a></li>
+                </ul>
+            </div>
+            <!-- .....   -->
+        </nav>
+    </header>
+    <section id="inicio">
+        <h1>Bem-vindo à Fruteira do João</h1>
+    </section>
+    <section id="frutas">
+        <h2 id="titulo">As melhores frutas frescas para você e sua família!</h2>
+        
+        <div id="containersa">
+            <div class="fruta">
+                <h3>MAÇÃ</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfPLNFRUinNz90LgH1EjeMyy9hZkxixeGqw&usqp=CAU"
+                    alt="Maçã" />
+                <button class="AdicionarCarrinho" data-nome="Maçã" data-preco="2.00">Adicionar ao Carrinho</button>
+                <div class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>ABACAXI</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXPmPvIka8cQkxRSv2Tjtc81S3f9eTDqFAqg&usqp=CAU"
+                    alt="ABACAXI" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>BERGAMOTA</h3>
+                <img src="https://slowfoodbrasil.org.br/wp-content/uploads/2007/07/bergamota.jpg" alt="bergamota" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>UVA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0nQF8dkDZlwqi_zQX_khdBW7s5PkcfSYoA&usqp=CAU"
+                    alt="uva" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>GOIABA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8MJdQiFaBlaEePgIzdsD1oF_a04DgB3mFA&usqp=CAU"
+                    alt="goiaba" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>LARANJA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGi3cQLlmQSDLQMYZrVknlUKeRBpYr3Z6ZUA&usqp=CAU"
+                    alt="laranja" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>PERA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPYkWNOhln1KLd3bjvdX5AuyARkXZZmjc4tw&usqp=CAU"
+                    alt="PERAS-RIO-NEGRO" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>BANANA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOQb5N_2Af8z7DtvQyhI_pndaQU7cH5a2A3w&usqp=CAU"
+                    alt="Banana" id="banana" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>MAÇÃ</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfPLNFRUinNz90LgH1EjeMyy9hZkxixeGqw&usqp=CAU"
+                    alt="Maçã" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>ABACAXI</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXPmPvIka8cQkxRSv2Tjtc81S3f9eTDqFAqg&usqp=CAU"
+                    alt="ABACAXI" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>BERGAMOTA</h3>
+                <img src="https://slowfoodbrasil.org.br/wp-content/uploads/2007/07/bergamota.jpg" alt="bergamota" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>UVA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_0nQF8dkDZlwqi_zQX_khdBW7s5PkcfSYoA&usqp=CAU"
+                    alt="uva" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>GOIABA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN8MJdQiFaBlaEePgIzdsD1oF_a04DgB3mFA&usqp=CAU"
+                    alt="goiaba" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>LARANJA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGi3cQLlmQSDLQMYZrVknlUKeRBpYr3Z6ZUA&usqp=CAU"
+                    alt="laranja" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+            <div class="fruta">
+                <h3>PERA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPYkWNOhln1KLd3bjvdX5AuyARkXZZmjc4tw&usqp=CAU"
+                    alt="PERAS-RIO-NEGRO" id="pera" />
+                <button class="AdicionarCarrinho">Adicionar ao Carrinho</button>
+                <div id="mensagem" class="mensagem">Adicionado ao Carrinho!</div>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h2 id="contato1">Entre em Contato</h2>
+        <p>Estamos à disposição para atender suas perguntas e pedidos.</p>
+        <address>
+            Endereço: Rua das Frutas, 123 - Cidade das Frutas, Estado
+            <br />Telefone: (123) 456-7890 Email: contato@fruteiradojoao.com
+        </address>
+        <p id="p"><strong>Cadastre seu E-mail para novidades!</strong></p>
+        <form>
+            <label for="email">Email: </label>
+            <input type="email" placeholder="Inserir" id="email" required />
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Fruteira do João. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
