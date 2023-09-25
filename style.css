@@ -63,61 +63,79 @@ body::before {
   display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 560px){
 
   #navegacao {
     display: none;
   }
 
   #navegacao > #linkCarrinho > #carrinho {
-    display: block;
+    display: inline-block;
   }
 
-  #pesquisar {
+
+
+  #menu  {
+    width: 22%;
+    margin-top: -20px;
+    margin-left: 35%;
+    display: none;
+   
+    list-style-type: none;
+    text-align: left;
+    height: 130px;
+    position: fixed;
     
   }
 
-  #menu  {
+  #menu > li a{
+    text-decoration: none;
+    color: white;
+  }
+
+  #menu-suspenso  {
     width: 100%;
-    margin-left: -7%;
+    margin-left: -8px;
     margin-top: -61px;
-    display: none;
     float: left;
     background-color: #258337;
     list-style-type: none;
     text-align: left;
     height: 60px;
     position: fixed;
+    display: block;
+    border: none;
+    border-bottom: solid rgb(2, 175, 25);  
   }
 
-
-  #menu > li a{
-    text-decoration: none;
-    color: white;
-    padding: 8px 16px;
+  #menu-suspenso > #menu > li {
+    padding: 15px;
+    margin-left: -35%;
+    background-color: #258337;
+  }
+  
+  #menu-suspenso > #menu > li:hover {
+    background-color: #000000;
+    
   }
 
-  #menu > li a:hover {
-    background-color: #111;
+  
+
+  #botao {
+    margin: 20px;
+    margin-top: 3px;
+    margin-left: 35%;
+    background-color: #56BA56;
+    color: rgb(255, 255, 255);
+    height: 90%;
+    width: 30%;
+    font-weight: bolder;
+    
   }
 
-  #menu-suspenso  {
-    width: 20%;
-    margin-left: 0;
-    margin-top: -61px;
-    float: left;
-    background-color: #01ff30;
-    list-style-type: none;
-    text-align: left;
-    height: 60px;
-    position: fixed;
+#menu-suspenso:hover #menu {
     display: block;
   }
-
-  #menu-suspenso:hover #menu {
-    display: block;
-  }
-
 }
 
 #pesquisar {
@@ -128,6 +146,8 @@ width: 300px;
 border: solid #56BA56;
 border-radius: 5px;
 }
+
+
 
 @media screen and (max-width: 1110px) {
   #pesquisar {
